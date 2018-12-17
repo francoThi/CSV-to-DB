@@ -1,0 +1,56 @@
+{
+    "db": {
+        "mysql": {
+            "host": "localhost",
+            "port": 3306,
+            "database": "", // Your database name
+            "user": "", // Your username
+            "password": "" // Your password
+        }
+    },
+    "source_folder": "C:\\...\\WS\\Scotch\\Scotch - Stats", // Your absolute path files to parse
+    "extensionAllowed": [ // Your extensions files allowed (Example: .csv, .xml, ...)
+        ".csv"
+    ],
+    "separators":
+    {
+        "line": "\n", 
+        "column": ","
+    },
+    "table_name": "football_stats_results", // Your table name
+    "columns_name": [ 
+        // Your columns for your table ("Column file", "your column name for dbb", "type of your column")
+        // NOTE: DATE or DATETIME don't works for now if they are not formated in your file
+        ["Div", "division", "VARCHAR(255)"],
+        ["Date", "date_match", "VARCHAR(255)"],
+        ["HomeTeam", "equipe_domicile", "VARCHAR(255)"],
+        ["AwayTeam", "equipe_exterieur", "VARCHAR(255)"],
+        ["FTHG", "score_fin_domicile", "INT"],
+        ["FTAG", "score_fin_exterieur", "INT"],
+        ["FTR", "vainqueur", "VARCHAR(255)"],
+        ["HTHG", "score_mitemps_domicile", "INT"],
+        ["HTAG", "score_mitemps_exterieur", "INT"],
+        ["HTR", "vainqueur_mitemps", "VARCHAR(255)"],
+        ["HS", "frappes_domicile", "INT"],
+        ["AS", "frappes_exterieur", "INT"],
+        ["HST", "frappes_cadrees_domicile", "INT"],
+        ["AST", "frappes_cadrees_exterieur", "INT"],
+        ["HC", "corners_domicile", "INT"],
+        ["AC", "corners_exterieur", "INT"],
+        ["HF", "fautes_domicile", "INT"],
+        ["AF", "fautes_exterieur", "INT"],
+        ["HFKC", "coup_franc_domicile", "INT"],
+        ["AFKC", "coup_franc_exterieur", "INT"],
+        ["HY", "carton_jaune_domicile", "INT"],
+        ["AY", "carton_jaune_exterieur", "INT"],
+        ["HR", "carton_rouge_domicile", "INT"],
+        ["AR", "carton_rouge_exterieur", "INT"],
+        ["BbAvH", "cote_victoire_domicile", "FLOAT"],
+        ["BbAvD", "cote_match_nul", "FLOAT"],
+        ["BbAvA", "cote_victoire_exterieur", "FLOAT"],
+        ["BbAv>2.5", "cote_plus_25buts", "FLOAT"],
+        ["BbAv<2.5", "cote_moins_25buts", "FLOAT"],
+        ["BbAvAHH", "cote_victoire_domicile_handicap1", "FLOAT"],
+        ["BbAvAHA", "cote_victoire_exterieur_handicap1", "FLOAT"]
+    ]
+}
