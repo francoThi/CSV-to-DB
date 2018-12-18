@@ -1,4 +1,5 @@
 node_modules
-logs
+logs/combined.log
+logs/error.log
 package-lock.json
 config/default.json
