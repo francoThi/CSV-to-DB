@@ -13,7 +13,7 @@ const config_separators = config.get("separators");
 const config_table = config.get("table_name");
 const config_columns = config.get("columns_name");
 
-console.log('START SCRIPT - INSERT CSV DATA');
+console.log('START SCRIPT - INSERT DATA');
 
 var createTable = new Promise((resolve) => {
 	var query = "CREATE TABLE IF NOT EXISTS " + config_table + " (id INT NOT NULL AUTO_INCREMENT, ";
